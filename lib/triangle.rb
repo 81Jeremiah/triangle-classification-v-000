@@ -10,8 +10,9 @@ class Triangle
   def not_a_triangle?
     @triangle.any?{ |side| side <= 0} || @triangle[0] + @triangle[1] <= @triangle[2]
   end
+
   def kind
-    if
+    if not_a_triangle?
       begin
         raise TriangleError
       end
