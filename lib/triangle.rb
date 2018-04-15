@@ -7,11 +7,14 @@ class Triangle
     @triangle = [@side_1, @side_2, @side_3].sort
   end
 
+ def not_a_triangle?
+    @triangle.any?{ |side| side <= 0} || @triangle[0] + @triangle[1] <= @triangle[2]
+  
   def kind
-    if @triangle.any?{ |side| side <= 0} || @triangle[0] + @triangle[1] <= @triangle[2]
+    if 
       begin
         raise TriangleError
-    end
+      end
     elsif
       @side_1 == @side_2 && @side_2 == @side_3
         :equilateral
