@@ -1,4 +1,5 @@
 class Triangle
+
   def initialize(side_1, side_2, side_3)
     @side_1 = side_1
     @side_2 = side_2
@@ -9,7 +10,7 @@ class Triangle
   def kind
     if @triangle.any?{ |side| side <= 0} || @triangle[0] + @triangle[1] <= @triangle[2]
       begin
-        raise TriangleError  
+        raise TriangleError
     end
     elsif
       @side_1 == @side_2 && @side_2 == @side_3
